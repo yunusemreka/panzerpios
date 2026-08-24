@@ -1,0 +1,34 @@
+{
+  "name": "panzerp",
+  "version": "2.0.0",
+  "description": "Panzercrom ERP - Üretim ve Planlama Yönetim Sistemi",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . PanzERP --platform=win32 --arch=x64 --overwrite",
+    "mobile:sync": "copy /Y index.html www\\index.html && copy /Y logo.png www\\logo.png && npx cap sync",
+    "mobile:android": "npx cap open android",
+    "mobile:ios": "npx cap open ios"
+  },
+  "keywords": [
+    "erp",
+    "panzercrom",
+    "production"
+  ],
+  "author": "Yunus Kaya",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/cli": "^8.5.0",
+    "@capacitor/core": "^8.5.0",
+    "@capacitor/ios": "^8.5.0",
+    "@capacitor/keyboard": "^8.0.5",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.3"
+  }
+}
